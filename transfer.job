@@ -1,0 +1,15 @@
+#!/bin/csh
+
+#$ -M bbecker5@nd.edu
+#$ -m abe		 
+#$ -pe smp 4	
+#$ -N TransferLeft
+#$ -q *@@cvrl_gpu
+
+module load python
+module load caffe/2016-gpu
+
+module load intel
+
+
+caffe train --solver=solver/googlenet_solver.proto --weights=model/bvlc_googlenet.caffemodel -gpu 0 
