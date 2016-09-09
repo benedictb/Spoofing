@@ -12,4 +12,4 @@ module load caffe/2016-gpu
 module load intel
 
 
-caffe train --solver=solver/googlenet_solver.proto --weights=model/bvlc_googlenet.caffemodel -gpu 0 
+caffe train --solver=solver/googlenet_solver.proto --weights=model/bvlc_googlenet.caffemodel -gpu 1 
